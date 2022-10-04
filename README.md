@@ -1,2 +1,12 @@
 # CS537
 Operating Systems
+
+This repository exists as an informal showcase of some of the UNIX projects I worked on in Operating Systems with Alex Grabowski (other than p1). I took the class in the spring semester of 2022.
+
+p1 - my-look.c and wordle.c: Introductory project; files have no relation to each other. my-look.c takes in a string as input and returns any lines in a file that contain that string as a prefix (similar to the "look" command on UNIX systems). wordle.c takes in a file containing words as well as a string that blacklists characters and returns all five letter words containing no blacklisted characters (i.e. if you input "hello" it won't return any words with 'h', 'e', 'l', or 'o').
+
+p2 - linkedlist.h, linkedlist.c, and mysh.c: In this project, we coded a shell so that an interactive and batch mode were available. In the interactive mode, after executing mysh.c users could run the shell like any other with commands like "ls", "cd" and the like. Additionally, file redirection and aliasing are functionalities. In the batch mode, a file is input as well with the commands a user wants to enter. The linkedlist files (implemented by me) were used on the backend to keep track of aliasing, see the code for details.
+
+p3 - main.c, mapreduce.h, mapreduce.c, hashmap.h, hashmap.c, and Makefile: In this project, we implemented a simplified version of the Google paradigm MapReduce (https://static.googleusercontent.com/media/research.google.com/en//archive/mapreduce-osdi04.pdf). The difference here is that a single machine is used, but the functions map() and reduce() are still run concurrently meaning multiple mappers and reducers can be run at the same time. The hashmap.h and mapreduce.h files were given, but the rest of the code is from scratch.
+
+p4 - runscan.c, read_ext2.h, read_ext2.c, and Makefile: In this project, image files are recovered from an ext2 disc image. The first half of the project consists of content recovery of the actual jpg images, and the second part has to deal with image file name recovery. Once the file is detected as a jpg, the individual inodes storing image information are written to the according file per ext2 spec. The read_ext2.h and read_ext2.c files were given, but runscan.c was made from scratch.
